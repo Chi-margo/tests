@@ -1,0 +1,14 @@
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes pop{50%{transform:scale(1.04)}}
+@keyframes shake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+
+.card{animation:rise .4s both;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);border-color:var(--acc)}
+.sec,.result{animation:rise .4s both}
+.opt,.chip,.zone,.btn,.type,.line{transition:border-color .15s,background .15s,transform .15s}
+.chip:active{transform:scale(.97)}
+.chip.drop{animation:pop .25s}
+.opt.good,.chip.good,.line.good{animation:pop .35s}
+.opt.bad,.chip.bad,.line.bad,.blank.bad{animation:shake .35s}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

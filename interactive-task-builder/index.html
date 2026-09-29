@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Interactive Task Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">Interactive Task Builder</a>
+    <nav>
+      <a data-k="home" href="index.html">Главная</a>
+      <a data-k="all" href="index.html#all">Все задания</a>
+      <a data-k="new" href="builder.html">Создать</a>
+      <a data-k="mine" href="index.html#mine">Мои задания</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Соберите упражнение за пару минут</h1>
+      <p class="muted">Создавайте тесты, пары, последовательности и другие задания без кода. Ученик выполняет их и сразу видит результат.</p>
+      <div class="actions">
+        <a class="btn" href="builder.html">+ Создать задание</a>
+        <a class="btn ghost" href="builder.html?mix=1">Случайный микс</a>
+      </div>
+    </section>
+    <h2 id="lt">Все задания</h2>
+    <div class="tools">
+      <input id="q" type="search" placeholder="Поиск по названию" aria-label="Поиск по названию">
+      <select id="ft" aria-label="Тип"></select>
+      <select id="fl" aria-label="Сложность"></select>
+    </div>
+    <div id="grid" class="grid"></div>
+    <p id="empty" class="muted" hidden>Ничего не найдено. Измените фильтры или <a href="builder.html"><u>создайте задание</u></a>.</p>
+  </main>
+  <script src="js/tasks.js"></script>
+  <script src="js/checker.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

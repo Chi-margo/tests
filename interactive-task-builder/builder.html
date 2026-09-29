@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Конструктор — Interactive Task Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">Interactive Task Builder</a>
+    <nav>
+      <a data-k="home" href="index.html">Главная</a>
+      <a data-k="all" href="index.html#all">Все задания</a>
+      <a data-k="new" href="builder.html">Создать</a>
+      <a data-k="mine" href="index.html#mine">Мои задания</a>
+    </nav>
+  </header>
+  <main>
+    <section id="editor">
+      <h1 id="bt">Выберите тип задания</h1>
+      <div id="types" class="types"></div>
+      <div id="form" hidden>
+        <div class="tabs"><button class="on" data-m="e">Редактор</button><button data-m="p">Предпросмотр</button></div>
+        <div id="ed">
+          <div class="fields">
+            <label>Название<input id="f-title" placeholder="Например, Языки и технологии"></label>
+            <label>Инструкция<input id="f-instr" placeholder="Что нужно сделать ученику"></label>
+            <label>Сложность<select id="f-level"></select></label>
+            <label id="pickw">Случайно взять из банка (0 — все)<input id="f-pick" type="number" min="0" value="0"></label>
+          </div>
+          <div id="items"></div>
+        </div>
+        <div id="pv" hidden></div>
+        <div class="actions"><button class="btn" id="save" type="button">Сохранить задание</button><span id="msg"></span></div>
+      </div>
+    </section>
+    <section id="player" hidden>
+      <a class="btn ghost" href="index.html">← К заданиям</a>
+      <h1 id="ph"></h1>
+      <div id="pbox"></div>
+    </section>
+  </main>
+  <script src="js/tasks.js"></script>
+  <script src="js/checker.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/builder.js"></script>
+</body>
+</html>
